@@ -1,5 +1,5 @@
 # Convert reg export to reg save
-This python program take a registry export ```.reg``` file as input and returns as registry binary hive ```.hiv``` as output. 
+This python program take a registry export ```.reg``` file as input and returns a registry binary hive ```.hiv``` as output. 
 Registry export files can be easier to obtain versus registry saves in some circumstances. Penetration testers may occasionally find that saving full registry hives is restricted or blocked by EDR or other opsec considerations.
 In these cases, common tradecraft is to exfil the ```.reg``` files and import them into a windows VM the pentester controls. Once imported, a proper registry save operation can be performed to obtain the hives. The requirement for using a windows VM to parse the ```.reg``` files is burdensome and unnecessary. The present tool can reconstruct a valid binary hive file from an exported registry text file with enough data fidelity to use in subsequent exploitation tooling such as secretsdump or mimikatz.
 
